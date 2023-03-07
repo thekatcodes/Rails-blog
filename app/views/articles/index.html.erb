@@ -5,7 +5,8 @@
 <%# use ERB tags <%  and <%=  to evaluate enclosed ruby code (similar to EJS) %>
   <% @articles.each do |article| %>
     <li>
-      <a href="/articles/<%= article.id %>">
+    <%# resources method sets up URL and path helpers, _path suffix  returns "/articles/#{article.id}" when given an article %>
+      <a href="<%= article_path(article) %>">
         <%= article.title %>
       </a>    
     </li>
