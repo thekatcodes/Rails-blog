@@ -1,3 +1,11 @@
-<%# <h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p> %>
-<h1>Hello, Rails!</h1>
+<h1>Articles</h1>
+
+<ul>
+<%# Reference/access instance variable @articles to access data and replace html content with it  %>
+<%# use ERB tags <%  and <%=  to evaluate enclosed ruby code (similar to EJS) %>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>
